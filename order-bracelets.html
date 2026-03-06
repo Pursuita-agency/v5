@@ -267,6 +267,68 @@
         background: #ffffff;
       }
 
+      .trust-section {
+        margin-top: 48px;
+        padding-top: 32px;
+        border-top: 1px solid rgba(36, 50, 71, 0.1);
+      }
+
+      .trust-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 32px;
+        margin-top: 24px;
+      }
+
+      .trust-item {
+        text-align: center;
+      }
+
+      .trust-icon {
+        width: 48px;
+        height: 48px;
+        margin: 0 auto 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(36, 50, 71, 0.05);
+      }
+
+      .trust-icon svg {
+        width: 24px;
+        height: 24px;
+        stroke: #243247;
+        opacity: 0.6;
+      }
+
+      .trust-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #243247;
+        margin-bottom: 8px;
+        opacity: 0.85;
+      }
+
+      .trust-description {
+        font-size: 14px;
+        color: #243247;
+        opacity: 0.6;
+        line-height: 1.6;
+      }
+
+      .reassurance-text {
+        text-align: center;
+        font-size: 15px;
+        color: #243247;
+        opacity: 0.7;
+        line-height: 1.8;
+        margin-top: 32px;
+        padding: 24px;
+        background: rgba(36, 50, 71, 0.03);
+        border-radius: 8px;
+      }
+
       .submit-button {
         width: 100%;
         padding: 16px 32px;
@@ -280,7 +342,7 @@
         letter-spacing: 0.05em;
         cursor: pointer;
         transition: all 0.3s ease;
-        margin-top: 32px;
+        margin-top: 24px;
       }
 
       .submit-button:hover:not(:disabled) {
@@ -292,6 +354,38 @@
       .submit-button:disabled {
         opacity: 0.6;
         cursor: not-allowed;
+      }
+
+      .payment-note {
+        text-align: center;
+        font-size: 14px;
+        color: #243247;
+        opacity: 0.6;
+        margin-top: 16px;
+      }
+
+      .closing-section {
+        margin-top: 60px;
+        padding: 48px 0;
+        text-align: center;
+        border-top: 1px solid rgba(36, 50, 71, 0.08);
+      }
+
+      .closing-logo {
+        font-family: 'Cinzel', serif;
+        font-size: 28px;
+        font-weight: 700;
+        color: #243247;
+        letter-spacing: 0.15em;
+        margin-bottom: 12px;
+      }
+
+      .closing-tagline {
+        font-family: 'Amiri', serif;
+        font-size: 16px;
+        color: #243247;
+        opacity: 0.5;
+        letter-spacing: 0.05em;
       }
 
       .modal {
@@ -398,6 +492,15 @@
         .header-content {
           flex-direction: column;
           gap: 16px;
+        }
+
+        .trust-grid {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+
+        .closing-logo {
+          font-size: 24px;
         }
       }
     </style>
@@ -559,10 +662,64 @@
               <div id="addressError" class="error-message"></div>
             </div>
 
+            <div class="trust-section">
+              <div class="trust-grid">
+                <div class="trust-item">
+                  <div class="trust-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                    </svg>
+                  </div>
+                  <h4 class="trust-title">استبدال خلال 14 يوم</h4>
+                  <p class="trust-description">
+                    يمكنك استبدال المنتج خلال 14 يوم من تاريخ الاستلام إذا لم يكن مناسباً لك.
+                  </p>
+                </div>
+
+                <div class="trust-item">
+                  <div class="trust-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <h4 class="trust-title">توصيل سريع</h4>
+                  <p class="trust-description">
+                    يتم تجهيز الطلب وشحنه خلال 3 إلى 5 أيام عمل.
+                  </p>
+                </div>
+
+                <div class="trust-item">
+                  <div class="trust-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                    </svg>
+                  </div>
+                  <h4 class="trust-title">تغليف أنيق</h4>
+                  <p class="trust-description">
+                    كل قطعة من ORZI تأتي بتغليف أنيق يليق بقيمتها.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="reassurance-text">
+              طلبك يتم تأكيده مباشرة بعد إرسال النموذج،<br>
+              وسيقوم فريق ORZI بالتواصل معك لتأكيد التفاصيل.
+            </div>
+
             <button type="submit" id="submitBtn" class="submit-button">
-              إرسال الطلب
+              أكمل طلبك الآن
             </button>
+
+            <p class="payment-note">
+              الدفع عند الاستلام متاح داخل مصر.
+            </p>
           </form>
+
+          <div class="closing-section">
+            <h2 class="closing-logo">ORZI</h2>
+            <p class="closing-tagline">خالد. راقٍ. أصيل.</p>
+          </div>
         </div>
       </div>
     </main>
@@ -743,7 +900,7 @@
           modal.classList.add('active');
         } finally {
           submitBtn.disabled = false;
-          submitBtn.textContent = 'إرسال الطلب';
+          submitBtn.textContent = 'أكمل طلبك الآن';
         }
       });
 
